@@ -1,9 +1,37 @@
-\documentclass{article}
-\usepackage[backend=biber,style=ieee]{biblatex}
+% !TeX program = lualatex
+% !TeX encoding = utf8
+% !TeX spellcheck = uk_UA
+% !TeX program = biber
+
+\documentclass[]{article}
+
 \usepackage{fontspec}
+
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+\usepackage[english, ukrainian]{babel}
+\usepackage[math-style=TeX]{unicode-math}
+\usepackage[a4paper, footskip=1cm, headsep=0.3cm, top=2cm, bottom=2cm, left=2cm,right=2cm]{geometry}
+
+\usepackage{csquotes}
+\usepackage[backend=biber,style=ieee]{biblatex}
+
+\defaultfontfeatures{Ligatures={TeX}}
+
+\renewcommand{\baselinestretch}{1.5} 
+
+\setlength{\parskip}{0.5ex}
+\setlength{\parindent}{2.5em}
+\setlength{\emergencystretch}{1em}
+
+
 \addbibresource{thesis.bib}
-\nocite{*}
 
 \begin{document}
-\printbibliography
+
+\nocite{*} 
+\printbibliography[title=Джерела]
+
 \end{document}

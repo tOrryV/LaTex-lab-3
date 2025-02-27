@@ -1,9 +1,32 @@
-\documentclass{article}
+% !TeX program = lualatex
+% !TeX encoding = utf8
+% !TeX spellcheck = uk_UA
+% !BIB program = bibtex8
+
+\documentclass[]{article}
+
 \usepackage{fontspec}
-\usepackage[backend=bibtex,style=ieee,sorting=none]{biblatex} % Використання bibtex8
-\addbibresource{thesis.bib}
-\nocite{*}
+
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+\usepackage[a4paper, footskip=1cm, headsep=0.3cm, top=2cm, bottom=2cm, left=2cm,right=2cm]{geometry}
+
+\defaultfontfeatures{Ligatures={TeX}}
+\usepackage[english, ukrainian]{babel}
+\usepackage[math-style=TeX]{unicode-math}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\setlength{\parskip}{0.5ex}
+\setlength{\parindent}{2.5em}
+\setlength{\emergencystretch}{1em}
 
 \begin{document}
-\printbibliography
+
+\nocite{*} 
+\bibliographystyle{alpha}
+\bibliography{thesis}
+
 \end{document}
